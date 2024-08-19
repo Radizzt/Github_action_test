@@ -43,3 +43,5 @@ jobs:
         run: |
           echo ${{ github.action }}
           echo $GITHUB_ACTOR
+          echo $GITHUB_REPOSITORY
+          echo ${{ github.workflow }}
