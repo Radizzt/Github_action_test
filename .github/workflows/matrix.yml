@@ -11,12 +11,21 @@ on:
 jobs:
   example_matrix:
     strategy:
+      max-parallel: 2
       matrix:
         pet: ["dog", "cat"]
         colour: ["red", "pink"]
+        include:
+          - shape: chonk
+            colour: white
+          - pet: rabbit
+            shape: chonky
+          - shape: chonkiest
+            pet: cat
+          
     runs-on: ubuntu-latest
     steps:
       - name: "echo pets and colours"
         run: |
-          echo ${{ matrix.pet }} and ${{ matrix.colour }}
+          echo ${{ matrix.pet }} and ${{ matrix.colour }} and shape: ${{ matrix.shape }}
         
