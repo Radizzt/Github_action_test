@@ -14,9 +14,13 @@ jobs:
       matrix:
         pet: ["dog", "cat"]
         colour: ["red", "pink"]
+        include:
+          - shape: chonk
+            colour: white
+          
     runs-on: ubuntu-latest
     steps:
       - name: "echo pets and colours"
         run: |
-          echo ${{ matrix.pet and matrix.colour }}
+          echo ${{ matrix.pet }} and ${{ matrix.colour }}
         
