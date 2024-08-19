@@ -11,6 +11,7 @@ on:
 jobs:
   example_matrix:
     strategy:
+      max-parallel: 2
       matrix:
         pet: ["dog", "cat"]
         colour: ["red", "pink"]
