@@ -41,5 +41,5 @@ jobs:
     steps:
       - name: print out default variable
         run: |
-          echo ${{ GITHUB_ACTION }}
-          echo ${{ GITHUB_ACTOR }}
+          echo ${{ github.action }}
+          echo $GITHUB_ACTOR
