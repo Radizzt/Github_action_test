@@ -36,3 +36,10 @@ jobs:
     steps:
       - name: Print the input tag to STDOUT
         run: echo  The tags are ${{ inputs.tags }} 
+  echo-default-variable:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print out default variable
+        run: |
+          echo ${{ GITHUB_ACTION }}
+          echo ${{ GITHUB_ACTOR }}
