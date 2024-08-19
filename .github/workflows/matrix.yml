@@ -17,10 +17,13 @@ jobs:
         include:
           - shape: chonk
             colour: white
+          - shape: chonky
+          - pet: cat
+            shape: chonkiest
           
     runs-on: ubuntu-latest
     steps:
       - name: "echo pets and colours"
         run: |
-          echo ${{ matrix.pet }} and ${{ matrix.colour }}
+          echo ${{ matrix.pet }} and ${{ matrix.colour }} and shape: ${{ matrix.shape }}
         
