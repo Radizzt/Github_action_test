@@ -17,9 +17,10 @@ jobs:
         include:
           - shape: chonk
             colour: white
-          - shape: chonky
-          - pet: cat
-            shape: chonkiest
+          - pet: rabbit
+            shape: chonky
+          - shape: chonkiest
+            pet: cat
           
     runs-on: ubuntu-latest
     steps:
