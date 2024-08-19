@@ -18,5 +18,5 @@ jobs:
     steps:
       - name: "echo pets and colours"
         run: |
-          echo ${{ matrix.pet }} and ${{ matrix.colour }}
+          echo ${{ matrix.pet and matrix.colour }}
         
