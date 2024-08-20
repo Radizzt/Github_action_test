@@ -45,3 +45,5 @@ jobs:
           echo $GITHUB_ACTOR
           echo $GITHUB_REPOSITORY
           echo ${{ github.workflow }}
+          echo "**************** CONTEXT VARIABLE *******************"
+          echo "runner os: " ${{ runner.os }}
