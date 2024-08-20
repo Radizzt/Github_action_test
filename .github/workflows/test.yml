@@ -46,4 +46,5 @@ jobs:
           echo $GITHUB_REPOSITORY
           echo ${{ github.workflow }}
           echo "**************** CONTEXT VARIABLE *******************"
-          echo "runner os: " ${{ runner.os }}
+          echo "runner: " ${{ runner }}
+          echo "job: " ${{ job }}
