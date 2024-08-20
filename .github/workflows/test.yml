@@ -59,7 +59,7 @@ jobs:
       - name: Dump runner context
         env:
           RUNNER_CONTEXT: ${{ toJson(runner) }}
-        run: echo "${{ toJson(runner) }}"
+        run: echo "Runner is ${{ toJson(runner) }}"
       - name: Dump strategy context
         env:
           STRATEGY_CONTEXT: ${{ toJson(strategy) }}
