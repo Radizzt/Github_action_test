@@ -13,4 +13,4 @@ jobs:
       - name: Format String
         run: echo "${{ format('Hello {0} you''re inside {1} {2}', '$GITHUB_ACTOR', 'github.workflow', '$RUNNER_OS') }}"
       - name: Hash file
-        run: echo ${{ hashFiles('**/*.yml')}}
+        run: echo ${{ hashFiles('/.github/**/*.yml')}}
