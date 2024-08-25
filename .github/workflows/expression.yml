@@ -11,4 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Format String
-        run: echo ${{ format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat') }}
+        run: echo ${{ format('Hello {0} you're inside {1} {2}', 'Mona', 'the', 'Wee') }}
+        #run: echo ${{ format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat') }}
