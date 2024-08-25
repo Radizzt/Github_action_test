@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Format String
-        run: echo "${{ format('Hello {0} you\'re inside {1} {2}', '$GITHUB_ACTOR', 'github.workflow', '$RUNNER_OS') }}"
+        run: echo "${{ format('Hello {0} you''re inside {1} {2}', '$GITHUB_ACTOR', 'github.workflow', '$RUNNER_OS') }}"
