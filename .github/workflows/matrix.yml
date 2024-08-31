@@ -22,6 +22,8 @@ jobs:
             shape: chonky
           - shape: chonkiest
             pet: cat
+          - shape: chonker
+            colour: pink
           
     runs-on: ubuntu-latest
     steps:
