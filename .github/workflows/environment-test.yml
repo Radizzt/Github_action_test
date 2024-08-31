@@ -1,0 +1,24 @@
+name: Environment test
+
+on: workflow_dispatch
+
+env:
+    TOPLEVELVAR: "top level"
+
+jobs:
+    environment-setup:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "setup env"
+              run: |
+                echo "CUST_VAR=HELLO WORLD" >> $GITHUB_ENV
+                echo "CUST_VAR is $CUST_VAR"
+                echo "TOPLEVELVAR is $TOPLEVELVAR"
+            - name: "use varible"
+              run: |
+                echo "cust_var is: $CUST_VAR"
+                echo "Another one in step: $FUN_TIME"
+                echo "TOPLEVELVAR is $TOPLEVELVAR"
+              env:
+                FUN_TIME: "funny variable"
+                TOPLEVELVAR: "step changed"
