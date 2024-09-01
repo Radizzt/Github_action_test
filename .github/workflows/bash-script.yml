@@ -14,9 +14,12 @@ jobs:
       - name: "make the script executable"
         run: |
           pwd
-          ls -l
+          ls -la
           git status
           chmod +x test.sh
+          ls -la
       - name: "run script"
         run: |
+          pwd
+          ls -la
           ./test.sh
