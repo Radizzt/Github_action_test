@@ -24,4 +24,4 @@ jobs:
           ls -la
           ./test.sh
         env:
-          ACTOR: ${{GITHUB_ACTOR}}
+          ACTOR: ${{github.actor}}
