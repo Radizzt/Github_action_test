@@ -11,8 +11,12 @@ jobs:
     steps:
       - name: "checkout repo"
         uses: actions/checkout@v4
-      - name: "run script"
+      - name: "make the script executable"
         run: |
           pwd
-          ls
+          ls -l
+          git status
+          chmod +x test.sh
+      - name: "run script"
+        run: |
           ./test.sh
