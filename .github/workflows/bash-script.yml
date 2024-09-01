@@ -23,3 +23,5 @@ jobs:
           pwd
           ls -la
           ./test.sh
+        env:
+          ACTOR: ${{GITHUB_ACTOR}}
