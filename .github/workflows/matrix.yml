@@ -7,6 +7,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+#concurrency group
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   example_matrix:
@@ -22,6 +26,8 @@ jobs:
             shape: chonky
           - shape: chonkiest
             pet: cat
+          - shape: chonker
+            colour: pink
           
     runs-on: ubuntu-latest
     steps:
