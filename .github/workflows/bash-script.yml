@@ -2,12 +2,16 @@ name: shell script workflow
 
 on: workflow_dispatch
 
+defaults:
+  run:
+    working-directory: ./my-script
+
 jobs:
   running-script:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./my-script
+    #defaults:
+      #run:
+        #working-directory: ./my-script
     steps:
       - name: "checkout repo"
         uses: actions/checkout@v4
