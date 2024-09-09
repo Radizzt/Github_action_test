@@ -24,6 +24,7 @@ jobs:
                 TOPLEVELVAR: "step changed"
     environment-call:
         runs-on: ubuntu-latest
+        needs: environment-setup
         steps:
             - name: "call the previous environment variables"
               run: |
