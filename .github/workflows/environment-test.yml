@@ -14,7 +14,7 @@ jobs:
                 echo "CUST_VAR=HELLO WORLD" >> $GITHUB_ENV
                 echo "CUST_VAR is $CUST_VAR"
                 echo "TOPLEVELVAR is $TOPLEVELVAR"
-            - name: "use varible"
+            - name: "use variable"
               run: |
                 echo "cust_var is: $CUST_VAR"
                 echo "Another one in step: $FUN_TIME"
@@ -22,3 +22,12 @@ jobs:
               env:
                 FUN_TIME: "funny variable"
                 TOPLEVELVAR: "step changed"
+    environment-call:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "call the previous environment variables"
+              run: |
+                echo "cust_var is: $CUST_VAR"
+                echo "Another one in step: $FUN_TIME"
+                echo "TOPLEVELVAR is $TOPLEVELVAR"
+            
