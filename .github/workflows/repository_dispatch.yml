@@ -12,4 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Format String
-        run: echo "the event is... $GITHUB_EVENT"
+        run: |
+          echo "the event is... $GITHUB_EVENT_NAME"
+          echo "the actor is... $GITHUB_ACTOR"
