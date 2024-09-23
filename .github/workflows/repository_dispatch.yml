@@ -1,0 +1,15 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Repository Dispatch
+# Controls when the workflow will run
+on:
+  repository_dispatch:
+    types: [test_result]
+  workflow_dispatch:
+
+jobs:
+  expression-functions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Format String
+        run: echo "the event is... $GITHUB_EVENT"
