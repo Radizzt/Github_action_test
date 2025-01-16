@@ -1,6 +1,8 @@
 name: Environment test
 
-on: workflow_dispatch
+on:
+  push: 
+  workflow_dispatch:
 
 env:
     TOPLEVELVAR: "top level"
