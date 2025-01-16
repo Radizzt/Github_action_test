@@ -1,0 +1,30 @@
+name: CI/CD Example
+
+on:
+  push: 
+  workflow_dispatch:
+
+
+jobs:
+    build-artifact:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "creating artifact"
+              run: |
+                echo "buillding artifact..."
+                touch artifact.zip
+                ls -la
+            - name: "upload artifact"
+              run: |
+                echo "uploading artifact to artifactory"
+                
+    deploying-artifact:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "upload artifact"
+              run: |
+                echo "uploading artifact to artifactory"
+                ls -la
+                touch artifact.zip
+                ls -la
+
